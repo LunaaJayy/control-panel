@@ -28,3 +28,19 @@ Echt heel veel. Alles wat in de presentaties voorkwam wist ik eigenlijk heel wei
 Na de voorjaarsreces heb wil ik beginnen met het coderen van mijn idee, de html wil ik sws hebben. Daarnaast wil ik een breakdownschets goed hebben.
 
 ## Week 1 - reflectie
+Voor dit assignment wil ik een control panel maken voor een podium in het theater. Ik wil hierbij eerst beginnen met het maken van het podium, en beetje zoals deze foto:
+
+![foto van een podium](/readme-images/dag2-podium-foto.png)
+
+Vervolgens wil ik eronder een control panel maken. Deze is te zien op het volgende blaadje. Mijn ontwerp- en keuze proces is hier ook te zien.
+
+![schets van podium](/readme-images/dag2-schets1.jpeg)
+![bedenkproces](/readme-images/dag2-schets2.jpeg)
+
+Het eerste wat ik wil doen is het podium maken met daarop het licht wat je uit en aan kan zetten. Dit wil ik onder andere door middel van shapes doen. Met de control panel ga ik forms gebruiken die door middel van :checked (of de JS voor het besturen van de range) de lichten heen en weer kan bewegen. Dit is zijn de eerste css techniques die ik wil gebruiken. 
+
+Mijn grootste uitdagingen zullen zitten in het niet te perfectionistisch willen doen, ik twijfelde namelijk heel erg over dit ontwerp omdat ik bang was dat het lelijk zou worden. Daarnaast, qua CSS, zijn de shapes voor nu de grootste uitdaging, en ook hoe ik deze goed kan positioneren, ook aan de hand van de range input. Ik wil namelijk het liefst de lichtbron op dezelfde plek houden en dat de lichtspot naar links en rechts beweegt. Daarnaast zou ik het liefst deze control panel in een soort pixel-achtig stijl willen maken, of een erg simpele stijl. Denk bijvoorbeeld (qua simpel) aan hoe Lisa haar personal website had gemaakt, of (bij pixel) aan de game Papers, Please:
+
+![papers please voorbeeld](/readme-images/papersplease-vb.jpg)
+
+Ik ben erg benieuwd naar mijn proces en naar wat ik allemaal nog meer kan leren!
