@@ -44,3 +44,22 @@ Mijn grootste uitdagingen zullen zitten in het niet te perfectionistisch willen 
 ![papers please voorbeeld](/readme-images/papersplease-vb.jpg)
 
 Ik ben erg benieuwd naar mijn proces en naar wat ik allemaal nog meer kan leren!
+
+## Week 2
+### Dag 3 - Woensdag 4 maart 
+ik was er niet.
+
+### Dag 4 - Donderdag 5 maart, met Teun
+**Wat heb ik gedaan**\
+Ik heb vandaag het podium, met de gordijnen en vervolgens de lamp gemaakt. Vervolgens heb ik zitten puzzelen met het licht zelf en diens positioning. Ik heb ook een anchor positioning workshop bijgewoond.
+
+**Hoe lang heeft dit geduurd**\
+Dit heeft de hele dag geduurd. Het maken van het podium duurde ongeveer 2 a 3 uur, en de positioning van het licht en de lamp duurde de rest van de dag. 
+
+**Wat heb ik geleerd**\
+Ik heb meer geleerd over anchor positioning, clip-paths (met polygons) en ook over rotations (met x, y en z). Eigenlijk dus een hele hoop!
+
+**Wat ga ik morgen doen**\
+De volgende keer wil ik een start maken aan de vormgeving van de control panel en ervoor zorgen dat het licht kan bewegen.
+
+## Week 2 - reflectie
