@@ -7,6 +7,10 @@
     --light-base: #2A3439;
     --light: #FFFACD;
 }
+/* 
+main, main * {
+    transform-style: preserve-3d;
+} */
 
 
 body {
@@ -70,10 +74,11 @@ main>aside {
 /* LAMP */
 main section + div:nth-of-type(1) {
     position: absolute;
-    left: 48%;
+    left: calc(50% - 0.5*35);
     top: 2%;
 
     width: 35px;
+
 
     div:nth-of-type(1) {
         clip-path: ellipse();
@@ -128,6 +133,10 @@ main > div:nth-of-type(3) {
     bottom: anchor(--spot-ground center);
     left: anchor(--spot-ground left);
     right: anchor(--spot-ground right);
+    
+    transform-origin: top;
+    transform: skewX(15deg);
+
 
     /* right: anchor(--lamp center);
     bottom: anchor(--spot-ground center); */
@@ -137,3 +146,7 @@ main > div:nth-of-type(3) {
 
     opacity: 50%;
 }
+
+/*  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/skew 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor
+*/

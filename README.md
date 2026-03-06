@@ -63,3 +63,21 @@ Ik heb meer geleerd over anchor positioning, clip-paths (met polygons) en ook ov
 De volgende keer wil ik een start maken aan de vormgeving van de control panel en ervoor zorgen dat het licht kan bewegen.
 
 ## Week 2 - reflectie
+
+Ook al was ik er deze week maar 1 dag, ben ik erg blij dat het een productieve dag was. Ik vond namelijk voorheen plaatjes maken met divjes best wel intimiderend. Ik had verwacht dat het erg moeilijk en frustrerend zou zijn. Nu is het ook wel frustrerend, maar goed te doen (zoals heel veel met coderen). Na de vorige voortgangsgesprek had ik op een blaadje geschreven wat ik allemaal wilde doen de volgende keer. Ik was echter vergeten dat ik dat allemaal op dat blaadje had geschreven en dus had ik hem weggegooid (niet zo slim). Gelukkig kon Nils mij helpen met op weg komen, nadat het bij mij was mislukt, en kon ik weer goed op gang komen. 
+
+Het maken van de lamp met het licht vond ik erg leuk om te doen. Ik begon met het schetsen van de lamp met hoe hij er ongeveer uit moest zien.
+
+![schets lamp dag 4](/readme-images/dag4-schets1.jpeg)
+
+Het leek allemaal wat makkelijker dan ik dacht toen ik de website ontdekte waarbij je met clip-path vormen kon maken, en daarbij ook gelijk de code van kreeg. Ik snapte zo meer van ellips en polygons omdat de code onderin zich ook aanpaste aan hoe je het vormpje maakte. 
+
+Ik begon ook met het bedenken van hoe het licht zou moeten bewegen.
+
+![schets lamp bewegen dag 4](/readme-images/dag4-schets2.jpeg)
+
+Ik wilde dit dus eerst met anchor positioning doen, maar kwam er toen achter dat, als ik de lamp wil laten 'rotaten' dat dit niet echt mogelijk is. Er moet dus een andere manier komen, een idee hiervoor heb ik gelukkig al: skew().
+
+Het voortgangsgesprek heeft mij weer meer stof tot nadenken gegeven, en ook laten weten dat ik nog wel even aan de bak moet, het scheelt dat ik het leuk vind om te doen!
+
+Ik heb deze week weer erg veel geleerd over css. Meer over anchor positioning, het bestaan van @layer en nog veel meer!
