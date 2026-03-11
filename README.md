@@ -81,3 +81,17 @@ Ik wilde dit dus eerst met anchor positioning doen, maar kwam er toen achter dat
 Het voortgangsgesprek heeft mij weer meer stof tot nadenken gegeven, en ook laten weten dat ik nog wel even aan de bak moet, het scheelt dat ik het leuk vind om te doen!
 
 Ik heb deze week weer erg veel geleerd over css. Meer over anchor positioning, het bestaan van @layer en nog veel meer!
+
+## Week 3
+### Dag 5 - Woensdag 4 maart met Melvin
+**Wat heb ik gedaan**\
+Vandaag heb ik het begin van de control panel gemaakt en ervoor gezorgd dat één control al werkt (het bewegen van de lamp). Daarnaast ben ik begonnen aan het stijlen van een van de buttons dankzij een video. Ik heb ook een workshop gevolgd over container queries en dankzij Melvin heel veel ideeën gekregen over hoe ik dingen verder ga uitwerken!
+
+**Hoe lang heeft dit geduurd**\
+Het zorgen dat de lamp goed gepositioneerd was duurde een half uur. De rest van de dag heb ik aan de control panel gezeten. 
+
+**Wat heb ik geleerd**\
+Ik heb meer geleerd over container style queries en box shadows. Ook over het besturen van de inputs (bijna) aan de hand van css.
+
+**Wat ga ik morgen doen**\
+Morgen wil ik de gordijnen beter stijlen met css gradients, ik wil de button afmaken met zijn slider. Verder wil ik de begin typografie uitwerken en het restart

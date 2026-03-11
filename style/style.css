@@ -1,4 +1,5 @@
 :root {
+    --bg: #010B13;
     --plank-base: #81613E;
     --plank-border: #3D2B1F;
     --curtain-color: #800020;
@@ -6,33 +7,42 @@
 
     --light-base: #2A3439;
     --light: #FFFACD;
+
+    --ctrl-panel: #67676B;
+    --font-color: #FFF;
+    --btn-color-start: #555555;
+    --brn-color-end: #484848;
+    --btn-shadow: #363636;
 }
-/* 
+
 main, main * {
     transform-style: preserve-3d;
-} */
-
+}
 
 body {
     margin: 0;
     /* KLOPT DIT? IK HEB DE PLANKEN BREDER GEDAAN MAAR NU ZIJN DE GORDIJNEN NIET EVEN BREED */
     overflow-x: hidden; 
+    background-color: var(--bg);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* ----------------------------MARK: STAGE  */
+/* -------------------------------MARK: STAGE  
+*/
 /* bron: https://codepen.io/enbee81/pen/GgjZNGM?editors=1100 */
 
 main {
     --plank-width: 3rem;
+    --plank-height: 100%;
     perspective: 600px;
 
     width: 100vw;
     /* max-width: 800px; */
     height: 400px;
     position: relative;
-
-    background-color: var(--theater-back);
-
 }
 
 /* PLANKS */
@@ -49,11 +59,24 @@ main>section {
     transform-origin: center bottom;
 
     div{
-        width: 100%;
+        width: var(--plank-height);
         height: var(--plank-width);
         background-color: var(--plank-base);
         border-top: var(--plank-border) 2px solid;
     }
+}
+
+/* ACHTERGROND */
+main > div:first-of-type{
+    position: absolute;
+    background-color: var(--theater-back);
+    bottom: -48%;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    transform: translateZ(calc(-12 * var(--plank-width)));
+
+    z-index: -2;
 }
 
 /* CURTAINS */
@@ -72,10 +95,9 @@ main>aside {
 }
 
 /* LAMP */
-main section + div:nth-of-type(1) {
+main section + div {
     position: absolute;
-    left: calc(50% - 0.5*35);
-    top: 2%;
+    transform: translateX(calc(50vw + var(--lamp-place)));
 
     width: 35px;
 
@@ -97,9 +119,7 @@ main section + div:nth-of-type(1) {
     div:nth-of-type(3) {
         clip-path: ellipse();
         background-color: var(--light);
-
-        height: 10px;
-        
+        height: 10px;        
         transform: translateY(-10px);
 
         anchor-name: --lamp;
@@ -107,16 +127,19 @@ main section + div:nth-of-type(1) {
 }
 
 /* SPOTLIGHT */
-main > div:nth-of-type(2) {
+main section + div + div {
     clip-path: ellipse();
     background-color: var(--light);
 
-    position: absolute;
     bottom: 35px;
-    left: 33%;
+    position: fixed;
+    position-anchor: --lamp;
+    left: calc(anchor(left) - 84.5px);
 
     width: 200px;
     height: 30px;
+
+    
 
     /* opacity: 70%; */
     anchor-name: --spot-ground;
@@ -124,7 +147,7 @@ main > div:nth-of-type(2) {
 
 /* LIGHT */
 
-main > div:nth-of-type(3) {
+main section + div + div + div {
     clip-path: polygon(42% 0%, 60% 0%, 100% 100%, 0% 100%);
     background-color: var(--light);
 
@@ -135,17 +158,101 @@ main > div:nth-of-type(3) {
     right: anchor(--spot-ground right);
     
     transform-origin: top;
-    transform: skewX(15deg);
-
-
-    /* right: anchor(--lamp center);
-    bottom: anchor(--spot-ground center); */
-
-    /* height: 300px;
-    width: 200px; */
-
+    /* transform: skewX(15deg); */
     opacity: 50%;
 }
+
+/* ---------------------------- MARK: PANEL
+ */
+
+footer {
+    --btn-width:40px;
+    --btn-height:40px;
+    --range-width:100px;
+
+    width: 80%;
+    max-width: 450x;
+    height: 200px;
+    background: var(--ctrl-panel);
+    background: radial-gradient(circle, rgba(103, 103, 107, 1) 0%, rgba(53, 56, 57, 1) 100%);
+    border-radius: 10px;
+    position: relative;
+    margin-top: .4rem;
+    padding: 1rem;
+
+    font-family: "hyperspace-race-cap-variable", sans-serif;
+    font-variation-settings: "wdth" 100, "wght" 400;
+    color: var(--font-color);
+
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 0.5fr 1fr 1fr 1fr 1fr
+}
+
+footer label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    input {
+        width: var(--range-width);
+    }
+}
+
+/* positionering van de verschillende inputs */
+
+footer {
+    &>label:nth-of-type(1) {
+        grid-area: 1 / 2 / 1 / 2;
+    }
+    &>label:nth-of-type(2) {
+        grid-area: 2 / 1 / 2 / 1;
+    }
+    &>label:nth-of-type(3) {
+        grid-area: 2 / 2 / 2 / 2;
+    }
+}
+
+/* stijling van knoppen */
+
+/* dankzij: https://youtu.be/EcnqLgCEGKU */
+
+footer>label:nth-of-type(2) {
+    /* border: 2px red solid; */
+    width: var(--btn-width);
+    height: var(--btn-height);
+    cursor: pointer;
+    background: linear-gradient(180deg, var(--btn-color-start) 0%, var(--brn-color-end) 100%);
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 0 var(--btn-shadow), 0 12px 20px rgba(0 0 0 / .1);
+    /* box-shadow: -2px -2px 4px rgba(255 255 255 / .7), 3px 3px 5px rgba(0 0 0 / 0.2); */
+
+    &:has(input:checked) {
+        transform: translateY(6px);
+        box-shadow: inset 0 2px 0 var(--btn-shadow), inset 0 4px 8px rgba(0 0 0 / .4);
+        svg {
+            fill: var(--light);
+        }
+    }
+    svg {
+        fill: #303030;
+    }
+    input {
+        display: none;
+    }
+}
+
+/* footer ul {
+    grid-area: ;
+    display: flex;
+
+    li {
+    list-style: none;
+    }
+} */
+
 
 /*  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/skew 
     https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor
