@@ -83,7 +83,7 @@ Het voortgangsgesprek heeft mij weer meer stof tot nadenken gegeven, en ook late
 Ik heb deze week weer erg veel geleerd over css. Meer over anchor positioning, het bestaan van @layer en nog veel meer!
 
 ## Week 3
-### Dag 5 - Woensdag 4 maart met Melvin
+### Dag 5 - Woensdag 11 maart met Melvin
 **Wat heb ik gedaan**\
 Vandaag heb ik het begin van de control panel gemaakt en ervoor gezorgd dat één control al werkt (het bewegen van de lamp). Daarnaast ben ik begonnen aan het stijlen van een van de buttons dankzij een video. Ik heb ook een workshop gevolgd over container queries en dankzij Melvin heel veel ideeën gekregen over hoe ik dingen verder ga uitwerken!
 
@@ -95,3 +95,16 @@ Ik heb meer geleerd over container style queries en box shadows. Ook over het be
 
 **Wat ga ik morgen doen**\
 Morgen wil ik de gordijnen beter stijlen met css gradients, ik wil de button afmaken met zijn slider. Verder wil ik de begin typografie uitwerken en het restart
+
+### Dag 6 - Donderdag 12 maart met Jacco
+**Wat heb ik gedaan**\
+Vandaag heb ik ervoor gezorgd dat de twee sliders om het licht te bedienen volledig werken (zonder aan of uit knop), hiervoor moest ik de css en html erg aanpassen. Daarnaast heb ik ervoorg gezorgd dat de gordijnen open en dicht kunnen gaan.
+
+**Hoe lang heeft dit geduurd**\
+De gordijnen duurde ongeveer een half uurtje (nog met de transitions), de rest van de dag heb ik aan de control panel gezeten.
+
+**Wat heb ik geleerd**\
+Ik heb meer geleerd over anchor positioning, javascript en over gradients.
+
+**Wat ga ik morgen doen**\
+Ik ga (letterlijk morgen) ervoor zorgen dat de gordijnen open gaan bij het drukken op de knop en dat er de titel is toegevoegd. 
