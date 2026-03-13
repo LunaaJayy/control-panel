@@ -12,6 +12,7 @@
 	--ctrl-panel: #67676b;
 	--font-color: #fff;
 	--font-light: #fffacd;
+	--title-color: #FFF8E7;
 	--btn-color-start: #555555;
 	--brn-color-end: #484848;
 	--btn-shadow: #363636;
@@ -46,6 +47,11 @@ main {
 	/* max-width: 800px; */
 	height: 400px;
 	position: relative;
+
+	font-family: "Ballet", cursive;
+  	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
 }
 
 /* PLANKS */
@@ -82,6 +88,31 @@ main > div:first-of-type {
 	z-index: -2;
 }
 
+/* H1 */
+
+h1 {
+	font-size: 4rem;
+	color: var(--title-color);
+	width: 300px;
+	/* text-align: center; */
+	transform: translateZ(1rem);
+	margin: 3rem auto;
+	font-weight: normal;
+
+	span:first-of-type {
+		display: inline-block;
+		font-size: 2.3rem;
+		transition: transform 1s ease-in;
+
+	}
+	span:last-of-type{
+		display: inline-block;
+		transition: transform 1s ease-in;
+
+	}
+
+}
+
 /* CURTAINS */
 main > aside {
 	background: repeating-linear-gradient(
@@ -93,15 +124,19 @@ main > aside {
 	);
 
 	position: absolute;
-	left: 0;
-    right: 50vw;
 	bottom: 0;
 	top: 0;
+	width: 50vw;
 
-	& + aside {
+	transition: transform 1.2s ease-in-out;
 
-		left: 50vw;
+	&:first-of-type {
+		left: 0;
+		transform: translateX(0);
+	}
+	&:last-of-type {
 		right: 0;
+		transform: translateX(0);
 	}
 }
 
@@ -111,7 +146,7 @@ main > aside {
 main section + div {
 	position: absolute;
 	transform: translateX(calc(50vw + var(--lamp-place)));
-
+	top: 0;
 	width: 35px;
 
 	div:nth-of-type(1) {
@@ -285,14 +320,22 @@ footer > div:nth-of-type(1) {
 	}
 }
 
-/* gordijnen open */
-main:has(+ footer > div:nth-of-type(1) input:checked) aside {
-    width: 19%;
-    right: unset;
-
-    & + aside {
-		left: auto;
-        right: 0;
+/* MARK: curtains
+ */
+main:has(+ footer > div:nth-of-type(1) input:checked) {
+	h1 {
+		span:first-of-type {
+			transform: translateX(-500%);
+		}
+		span:last-of-type{
+			transform: translateX(500%);
+		}
+	}
+    aside:first-of-type {
+		transform: translateX(-62%);
+    }
+	aside:last-of-type {
+		transform: translateX(62%);
     }
 }
 
@@ -304,5 +347,5 @@ main:has(+ footer > div:nth-of-type(1) input:checked) aside {
 VRAGEN
 - Kan je met css de value van de min en max van de range aanpassen?
 ==> anders moet je het maar met movement lamp aanpassen :)
-
+==>https://dev.to/janeori/css-type-casting-to-numeric-tanatan2-scalars-582j
 */
