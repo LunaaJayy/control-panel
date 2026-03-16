@@ -108,3 +108,24 @@ Ik heb meer geleerd over anchor positioning, javascript en over gradients.
 
 **Wat ga ik morgen doen**\
 Ik ga (letterlijk morgen) ervoor zorgen dat de gordijnen open gaan bij het drukken op de knop en dat er de titel is toegevoegd. 
+
+## Week 3 - reflectie
+Ik ben erg blij met hoe deze week is verlopen! Aan het begin van deze opdracht (dus week 1) had ik nog niet heel veel vertrouwen in dat het er mooi uit zou zien. Maar eigenlijk ben ik nu al heel blij met hoe het eruit ziet en weet ik dat het nog mooier kan worden (en er nog meer als een control panel en theater uit gaat zien)!
+
+Ik vond het erg leuk om de grote puzzel van de lamp op te lossen. Het was vaak nogal frustrerend dat dingen niet werkte, maar door schetsen en het probleem op papier te schrijven lukte het steeds beter. 
+
+![schets dag 6 voor lamp besturing](/readme-images/dag6-schets.jpeg)
+
+Het hielp ook heel erg dat ik al wat dingen gevraagd had, deze informatie die ik kreeg van de docenten sla ik op en kan ik dus vervolgens weer gebruiken voor andere problemen die ik heb. Zoals bijvoorbeeld dat bij anchor positioning, de anchor voor hetgene wat gaat 'anchoren' moet staan in de html. 
+
+De workshop over container queries kon ook niet op een beter moment komen. Daar kwam namelijk de JavaScript uit die ik nodig had voor mijn control panel. Die workshop was het eerste ding van week 3 dat ik deed dus kan ik daarna direct aan mijn control panel beginnen. 
+
+![schets dag 5 voor control panel](/readme-images/dag5-schets1.jpeg)
+
+Naast dat ik nu erg veel geleerd heb over anchor positioning, heb ik ook veel geleerd van de mensen waarmee ik de check-outs heb gedaan, of soms even mijn werk aan heb laten zien. Van die mensen, denk aan Melvin, Jeppe en Arvid, heb ik nog meer ideeën gekregen voor mijn website!
+
+![schets dag 5 voor lamp](/readme-images/dag5-schets2.jpeg)
+
+Een leuke anecdote is nog dat ik erg lang niet begreep waarom max-width niet werkte.. Wat bleek? Ik was de 'p' vergeten bij 'px'..
+
+Deze week heb ik erg veel geleerd en ben ik erg geïnspireerd geraakt met wat allemaal met css kan. Ik voel me echt klaar om nog meer te erover te leren. 
