@@ -10,12 +10,19 @@
 	--light: #fffacd;
 
 	--ctrl-panel: #67676b;
+	--panel-shadow:#323234;
 	--font-color: #fff;
 	--font-light: #fffacd;
 	--title-color: #FFF8E7;
+
 	--btn-color-start: #555555;
 	--brn-color-end: #484848;
 	--btn-shadow: #363636;
+
+	--slider-color: #7F7F7F;
+	--slider-shadow: #474747;
+	--dark-light: #8F8100;
+	--track-color: #1F1F1F;
 }
 
 main,
@@ -32,6 +39,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	cursor: url("/images/cursor.svg") 18 13, auto
 }
 
 /* -------------------------------MARK: STAGE  
@@ -215,6 +224,16 @@ main section + div + div + div {
 	}
 }
 
+/* ---------------------------- MARK: OBJECTS
+ */
+
+ img {
+	width: 10rem;
+	position: relative;
+	left: 20vw;
+	top: -12rem;
+	transform: translateZ(-5rem);
+ }
 /* ---------------------------- MARK: PANEL
  */
 
@@ -222,6 +241,8 @@ footer {
 	--btn-width: 40px;
 	--btn-height: 40px;
 	--range-width: 100px;
+
+	cursor: url('/images/cursor.svg') 18 13, auto;
 
 	width: 80%;
 	max-width: 450px;
@@ -232,9 +253,11 @@ footer {
 		rgba(103, 103, 107, 1) 0%,
 		rgba(53, 56, 57, 1) 100%
 	);
+	box-shadow: 0 12px 0 var(--panel-shadow);
+
 	border-radius: 10px;
 	position: relative;
-	margin-top: 0.4rem;
+	margin-top: -0.7rem;
 	padding: 1rem;
 
 	font-family: "hyperspace-race-cap-variable", sans-serif;
@@ -254,12 +277,14 @@ footer label {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
+	cursor: url('/images/cursor.svg') 18 13, auto;
 	text-align: center;
 
 	input {
 		width: var(--range-width);
-		margin-top: 0.5rem;
+		margin-top: 0.8rem;
+		cursor: url('/images/cursor-pointer.svg') 11 1, pointer;
+
 	}
 }
 
@@ -277,7 +302,8 @@ footer {
 	}
 }
 
-/* stijling van knoppen */
+/* MARK: btns
+*/
 
 /* dankzij: https://youtu.be/EcnqLgCEGKU */
 
@@ -291,7 +317,6 @@ footer > div:nth-of-type(1) {
 	label {
 		width: var(--btn-width);
 		height: var(--btn-height);
-		cursor: pointer;
 		background: linear-gradient(
 			180deg,
 			var(--btn-color-start) 0%,
@@ -320,7 +345,62 @@ footer > div:nth-of-type(1) {
 	}
 }
 
-/* MARK: curtains
+/* MARK: sliders
+*/
+
+/* met behulp van: 
+- https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+- https://range-input-css.netlify.app
+*/
+
+input[type="range"] {
+	--webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+
+	cursor: url('/images/cursor-pointer.svg') 11 1, pointer;
+
+	/* margin-top: .8rem; */
+
+	&::-webkit-slider-runnable-track {
+		background-color: var(--track-color);
+		height: .25rem;
+		border-radius: .2rem;
+	}
+
+	&::-webkit-slider-thumb {
+  		-webkit-appearance: none;
+
+		--thumb-height: .8rem;
+		--thumb-width: 1.5rem;
+
+		background: repeating-linear-gradient(
+		to right,
+		var(--slider-color) 0px,
+		var(--slider-shadow) calc(.35 * var(--thumb-width)),
+		var(--slider-shadow) calc(.44 * var(--thumb-width)),
+		var(--font-light) calc(.48 * var(--thumb-width)),
+		var(--dark-light) calc(.52 * var(--thumb-width)),
+		var(--slider-shadow) calc(.56 * var(--thumb-width)),
+		var(--slider-shadow) calc(.65 * var(--thumb-width)),
+		var(--slider-color) var(--thumb-width)
+		);
+		margin-top: calc(-0.5 * var(--thumb-height));
+		height: var(--thumb-height);
+  		width: var(--thumb-width);
+
+		box-shadow:
+			0 4px 0 var(--btn-shadow),
+			0 12px 20px rgba(0 0 0 / 0.1);
+	}
+	&:focus{
+		outline: none;
+	}
+
+}
+
+
+/* MARK: ctrl curtains
  */
 main:has(+ footer > div:nth-of-type(1) input:checked) {
 	h1 {
@@ -338,10 +418,6 @@ main:has(+ footer > div:nth-of-type(1) input:checked) {
 		transform: translateX(62%);
     }
 }
-
-/*
-    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor
-*/
 
 /* 
 VRAGEN

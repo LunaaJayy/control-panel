@@ -129,3 +129,17 @@ Naast dat ik nu erg veel geleerd heb over anchor positioning, heb ik ook veel ge
 Een leuke anecdote is nog dat ik erg lang niet begreep waarom max-width niet werkte.. Wat bleek? Ik was de 'p' vergeten bij 'px'..
 
 Deze week heb ik erg veel geleerd en ben ik erg geïnspireerd geraakt met wat allemaal met css kan. Ik voel me echt klaar om nog meer te erover te leren. 
+
+## Week 4
+### Dag 7 - Dinsdag 17 maart met Sela
+**Wat heb ik gedaan**\
+Ik heb de sliders veranderd naar sliders die eruit zien als sliders op een control panel. Daarnaast ben ik begonnen met het coderen van de verschillende scenes (de verschillende themes), dit heb ik vooral in illustrator gedaan (en canva). Als laatst heb ik de cursor aangepast naar een zwarte handschoen
+
+**Hoe lang heeft dit geduurd**\
+Dit duurde ongeveer een halve dag, dus ongeveer 2,5 uur.
+
+**Wat heb ik geleerd**\
+Ik heb meer geleerd over cursors, meer over Illustrator en over het stijlen van de input type=range!
+
+**Wat ga ik morgen doen**\
+Morgen ga ik de verschillende knoppen toevoegen en ervoor zorgen dat die verschillende knoppen werkte met de theming.
