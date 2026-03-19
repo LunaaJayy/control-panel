@@ -30,18 +30,18 @@ Na de voorjaarsreces heb wil ik beginnen met het coderen van mijn idee, de html 
 ## Week 1 - reflectie
 Voor dit assignment wil ik een control panel maken voor een podium in het theater. Ik wil hierbij eerst beginnen met het maken van het podium, en beetje zoals deze foto:
 
-![foto van een podium](/readme-images/dag2-podium-foto.png)
+<img src="/readme-images/dag2-podium-foto.png" alt="foto van een podium" width="500px"/>
 
 Vervolgens wil ik eronder een control panel maken. Deze is te zien op het volgende blaadje. Mijn ontwerp- en keuze proces is hier ook te zien.
 
-![schets van podium](/readme-images/dag2-schets1.jpeg)
-![bedenkproces](/readme-images/dag2-schets2.jpeg)
+<img src="/readme-images/dag2-schets1.jpeg" alt="schets van podium" width="500px"/>
+<img src="/readme-images/dag2-schets2.jpeg" alt="bedenkproces" width="500px"/>
 
 Het eerste wat ik wil doen is het podium maken met daarop het licht wat je uit en aan kan zetten. Dit wil ik onder andere door middel van shapes doen. Met de control panel ga ik forms gebruiken die door middel van :checked (of de JS voor het besturen van de range) de lichten heen en weer kan bewegen. Dit is zijn de eerste css techniques die ik wil gebruiken. 
 
 Mijn grootste uitdagingen zullen zitten in het niet te perfectionistisch willen doen, ik twijfelde namelijk heel erg over dit ontwerp omdat ik bang was dat het lelijk zou worden. Daarnaast, qua CSS, zijn de shapes voor nu de grootste uitdaging, en ook hoe ik deze goed kan positioneren, ook aan de hand van de range input. Ik wil namelijk het liefst de lichtbron op dezelfde plek houden en dat de lichtspot naar links en rechts beweegt. Daarnaast zou ik het liefst deze control panel in een soort pixel-achtig stijl willen maken, of een erg simpele stijl. Denk bijvoorbeeld (qua simpel) aan hoe Lisa haar personal website had gemaakt, of (bij pixel) aan de game Papers, Please:
 
-![papers please voorbeeld](/readme-images/papersplease-vb.jpg)
+<img src="/readme-images/papersplease-vb.jpg" alt="papers please voorbeeld" width="500px"/>
 
 Ik ben erg benieuwd naar mijn proces en naar wat ik allemaal nog meer kan leren!
 
@@ -68,13 +68,13 @@ Ook al was ik er deze week maar 1 dag, ben ik erg blij dat het een productieve d
 
 Het maken van de lamp met het licht vond ik erg leuk om te doen. Ik begon met het schetsen van de lamp met hoe hij er ongeveer uit moest zien.
 
-![schets lamp dag 4](/readme-images/dag4-schets1.jpeg)
+<img src="/readme-images/dag4-schets1.jpeg" alt="schets lamp dag 4" width="500px"/>
 
 Het leek allemaal wat makkelijker dan ik dacht toen ik de website ontdekte waarbij je met clip-path vormen kon maken, en daarbij ook gelijk de code van kreeg. Ik snapte zo meer van ellips en polygons omdat de code onderin zich ook aanpaste aan hoe je het vormpje maakte. 
 
 Ik begon ook met het bedenken van hoe het licht zou moeten bewegen.
 
-![schets lamp bewegen dag 4](/readme-images/dag4-schets2.jpeg)
+<img src="/readme-images/dag4-schets2.jpeg" alt="schets lamp bewegen dag 4" width="500px"/>
 
 Ik wilde dit dus eerst met anchor positioning doen, maar kwam er toen achter dat, als ik de lamp wil laten 'rotaten' dat dit niet echt mogelijk is. Er moet dus een andere manier komen, een idee hiervoor heb ik gelukkig al: skew().
 
@@ -114,17 +114,17 @@ Ik ben erg blij met hoe deze week is verlopen! Aan het begin van deze opdracht (
 
 Ik vond het erg leuk om de grote puzzel van de lamp op te lossen. Het was vaak nogal frustrerend dat dingen niet werkte, maar door schetsen en het probleem op papier te schrijven lukte het steeds beter. 
 
-![schets dag 6 voor lamp besturing](/readme-images/dag6-schets.jpeg)
+<img src="/readme-images/dag6-schets.jpeg" alt="schets dag 6 voor lamp besturing" width="500px"/>
 
 Het hielp ook heel erg dat ik al wat dingen gevraagd had, deze informatie die ik kreeg van de docenten sla ik op en kan ik dus vervolgens weer gebruiken voor andere problemen die ik heb. Zoals bijvoorbeeld dat bij anchor positioning, de anchor voor hetgene wat gaat 'anchoren' moet staan in de html. 
 
 De workshop over container queries kon ook niet op een beter moment komen. Daar kwam namelijk de JavaScript uit die ik nodig had voor mijn control panel. Die workshop was het eerste ding van week 3 dat ik deed dus kan ik daarna direct aan mijn control panel beginnen. 
 
-![schets dag 5 voor control panel](/readme-images/dag5-schets1.jpeg)
+<img src="/readme-images/dag5-schets1.jpeg" alt="schets dag 5 voor control panel" width="500px"/>
 
 Naast dat ik nu erg veel geleerd heb over anchor positioning, heb ik ook veel geleerd van de mensen waarmee ik de check-outs heb gedaan, of soms even mijn werk aan heb laten zien. Van die mensen, denk aan Melvin, Jeppe en Arvid, heb ik nog meer ideeën gekregen voor mijn website!
 
-![schets dag 5 voor lamp](/readme-images/dag5-schets2.jpeg)
+<img src="/readme-images/dag5-schets2.jpeg" alt="schets dag 5 voor lamp" width="500px"/>
 
 Een leuke anecdote is nog dat ik erg lang niet begreep waarom max-width niet werkte.. Wat bleek? Ik was de 'p' vergeten bij 'px'..
 
@@ -177,7 +177,7 @@ De laatste loodjes zijn geweest en mijn website is (zo goed als) af! Natuurlijk 
 
 Ik ben erg blij met mijn theater en het controle paneel. Toen ik begon met het bedenken dat ik een theater wilde maken was ik bang dat het er niet mooi uit zou zien; dat je wel zag dat ik het geprobeerd had maar dat het nét lelijk was. Gelukkig is dat niet het geval (naar mijn mening). 
 
-![het theater](/readme-images/eind-theater-volledig.png)
+<img src="/readme-images/eind-theater-volledig.png" alt="het theater" width="500px"/>
 
 Hetgeen wat het minst soepel ging, maar waar ik dus ook het meest van heb geleerd is 3D 'ruimte' maken in CSS. Toen ik begon wist ik niet waar ik moest beginnen, gelukkig kon Nils mij op weg helpen. Echter, deze week moest ik ook weer meer dingen 3D maken, en dat was ook nog een heel dingetje. Ik denk wel dat hoe ik elementen 3D heb gemaakt echt de basis is, maar ik ben er blij mee. Verder had ik soms ook nog een beetje ruzie met de anchor positioning, maar wel een leukere ruzie dan die ik had met 3D CSS. Een noemenswaardige vermelding is, toen ik eenmaal skew() ging toepassen op de lamp, ik de anchor positioning helemaal anders en opnieuw moest doen, gelukkig ging dat wel een soort van soepel. 
 
@@ -187,13 +187,17 @@ Hier nog een video waarbij 3d en anchor positioning nog samen gingen en niet wer
 
 Ik ben erg trots met hoe de lamp beweegt en draait met (bijna) geen JavaScript. Toen ik eenmaal de workshop van Sanne had gevolgd wist ik gelijk hoe ik het wilde doen, en de skew() vervolgens viel ook wel mee. Ook ben ik blij met hoe mijn gordijnen eruit zien (met dank aan Melvin) en hoe mijn control panel eruit ziet.
 
-<img src="/readme-images/eind-licht-bwg.png" alt="lamp en control" width="200px"/>
+<img src="/readme-images/eind-licht-bwg.png" alt="lamp en control" width="500px"/>
 
 Een experiment dat ik heb geprobeerd, maar mislukte, was aan de hand van @layer ervoor zorgen dat de kleur van het licht van de scene wordt overschreden door de 'lichtknop'. Helaas deed geen een licht het toen meer dus had ik besloten het niet te doen. Ik wilde eigenlijk oefenen met het gebruik van @layer, maar door gebrek aan tijd wilde ik dit niet meer toevoegen. 
 
 Ik zou in het vervolg nog meer willen proberen met container queries, if(), maar ook uitzoeken wat function() doet, ik ben daar erg benieuwd naar. Ik heb aan de hand van dit project gezien hoeveel CSS kan en ik kijk uit om in de toekomst verder te onderzoeken wat er nog meer mogelijk is. Het is natuurlijk heel makkelijk om zo snel mogelijk naar Javascript te stappen als iets niet snel lukt met CSS, maar deze opdracht heeft mij laten zien dat dat niet altijd nodig is.  Dit oplossend denken vind ik erg leuk.
 
 ## Bronnen
+- Podium 3D: https://codepen.io/enbee81/pen/GgjZNGM?editors=1100
+- Button stijling: https://youtu.be/EcnqLgCEGKU
+- Stijling slider: https://range-input-css.netlify.app
+- Stijling slider: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
 
 
 
