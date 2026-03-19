@@ -40,7 +40,7 @@ body {
 	align-items: center;
 
 	cursor:
-		url("../images/cursor.svg") 18 13,
+		url("/images/cursor.svg") 18 13,
 		auto;
 }
 
