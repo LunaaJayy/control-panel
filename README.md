@@ -143,3 +143,16 @@ Ik heb meer geleerd over cursors, meer over Illustrator en over het stijlen van 
 
 **Wat ga ik morgen doen**\
 Morgen ga ik de verschillende knoppen toevoegen en ervoor zorgen dat die verschillende knoppen werkte met de theming.
+
+## Week 4
+### Dag 7 - Woensdag 18 maart met Justin
+**Wat heb ik gedaan**\
+
+
+**Hoe lang heeft dit geduurd**\
+
+
+**Wat heb ik geleerd**\
+
+
+**Wat ga ik morgen doen**\

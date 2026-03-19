@@ -61,6 +61,8 @@ main {
   	font-optical-sizing: auto;
   	font-weight: 400;
   	font-style: normal;
+
+	--trans-z-light: 2rem;
 }
 
 /* PLANKS */
@@ -71,10 +73,13 @@ main > section {
 	right: 0;
 	bottom: 0;
 
-	width: 120%;
+	width: 160%;
 
 	transform: translateX(-50%) rotateX(90deg);
 	transform-origin: center bottom;
+
+
+	box-shadow: inset 1rem 1rem rgba(0 0 0 / 1);
 
 	div {
 		width: var(--plank-height);
@@ -89,10 +94,10 @@ main > div:first-of-type {
 	position: absolute;
 	background-color: var(--theater-back);
 	bottom: -48%;
-	top: -50%;
+	top: -60%;
 	left: -50%;
 	right: -50%;
-	transform: translateZ(calc(-12 * var(--plank-width)));
+	transform: translateZ(calc(-14 * var(--plank-width)));
 
 	z-index: -2;
 }
@@ -103,8 +108,7 @@ h1 {
 	font-size: 4rem;
 	color: var(--title-color);
 	width: 300px;
-	/* text-align: center; */
-	transform: translateZ(1rem);
+	transform: translateZ(10rem);
 	margin: 3rem auto;
 	font-weight: normal;
 
@@ -124,28 +128,33 @@ h1 {
 
 /* CURTAINS */
 main > aside {
-	background: repeating-linear-gradient(
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	width: 50vw;
+	transition: transform 1.2s ease-in-out;
+
+	&:first-of-type {
+		background: repeating-linear-gradient(
+		to left,
+		var(--curtain-color) 0px,
+		var(--curtain-shadow) 10px,
+		var(--curtain-shadow) 20px,
+		var(--curtain-color) 30px
+	);
+		left: 0;
+		transform: translateX(0) translateZ(6.5rem);
+	}
+	&:last-of-type {
+		background: repeating-linear-gradient(
 		to right,
 		var(--curtain-color) 0px,
 		var(--curtain-shadow) 10px,
 		var(--curtain-shadow) 20px,
 		var(--curtain-color) 30px
 	);
-
-	position: absolute;
-	bottom: 0;
-	top: 0;
-	width: 50vw;
-
-	transition: transform 1.2s ease-in-out;
-
-	&:first-of-type {
-		left: 0;
-		transform: translateX(0);
-	}
-	&:last-of-type {
 		right: 0;
-		transform: translateX(0);
+		transform: translateX(0) translateZ(6.5rem);
 	}
 }
 
@@ -154,7 +163,7 @@ main > aside {
 /* LAMP */
 main section + div {
 	position: absolute;
-	transform: translateX(calc(50vw + var(--lamp-place)));
+	transform: translateZ(var(--trans-z-light)) translateX(calc(50vw + var(--lamp-place)));
 	top: 0;
 	width: 35px;
 
@@ -184,7 +193,7 @@ main section + div {
 
 /* LIGHT */
 main section + div + div {
-	clip-path: polygon(42% 0%, 60% 0%, 100% 100%, 0% 100%);
+	clip-path: polygon(42% 0%, 61% 0%, 100% 100%, 0% 100%);
 	background-color: var(--light);
 
 	position: fixed;
@@ -196,10 +205,10 @@ main section + div + div {
 
 	width: 200px;
 	position-anchor: --lamp;
-	top: anchor(--lamp center);
-	bottom: calc(anchor(top) - 315px);
+	top: calc(anchor(center));
+	bottom: calc(anchor(top) - 325px);
 	left: calc(anchor(left) - 84.5px);
-	right: calc(anchor(right) + 84.5);
+	right: calc(anchor(right) + 84.5px);
 }
 
 /* SPOTLIGHT */
@@ -207,14 +216,15 @@ main section + div + div + div {
 	clip-path: ellipse();
 	background-color: var(--light);
 
-	bottom: 35px;
 	position: fixed;
-
 	position-anchor: --light-anch;
-	left: anchor(--light-anch left);
+	left: anchor(left);
+	bottom: anchor(bottom);
+	
+	transform: translateY(100px) rotateX(90deg);
 
 	width: 200px;
-	height: 30px;
+	height: 200px;
 }
 
 @container style(--light-place > 0deg) {
@@ -227,13 +237,70 @@ main section + div + div + div {
 /* ---------------------------- MARK: OBJECTS
  */
 
- img {
-	width: 10rem;
-	position: relative;
-	left: 20vw;
-	top: -12rem;
-	transform: translateZ(-5rem);
- }
+main>div:nth-of-type(n + 5) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%; 
+
+	img {
+		position: absolute;
+	}
+}
+
+
+main>div:nth-of-type(5) img{
+	&:first-of-type { /* tree */
+		width: 14rem;
+		left: 5vw;
+		transform-origin: bottom;
+		transform: translateY(5.4rem) translateZ(-21.5rem) rotateX(90deg);
+		transition: transform 1s ease-in-out;
+ 	}
+	&:last-of-type { /* moon */
+		width: 8rem;
+		position: absolute;
+		right: 20vw;
+		transform: translateY(-11rem) translateZ(-2rem);
+		transition: transform 1.5s ease-in-out;
+	}
+
+}
+
+main>div:nth-of-type(6) img {
+	&:first-of-type{ /* closet */
+		width: 18rem;
+		right: 0;
+		bottom: -1.5rem;
+		transform: translateX(20rem) translateZ(-17rem);
+		transition: transform 1.2s ease-in-out;
+
+	}
+	&:last-of-type{ /* bed */
+		width: 15rem;
+		transform-origin: center bottom;
+		left: 10vw;
+		transform: translateY(15rem) translateZ(-6rem) rotateX(90deg);
+		transition: transform 1.5s ease-in-out;
+
+	}
+}
+
+main>div:nth-of-type(7) img {
+	&:first-of-type { /* alien */
+		width: 8rem;
+		transform: translateX(25rem) translateZ(-45rem) rotate(30deg) translateY(8rem);
+	}
+	&:last-of-type{ /* piramid */
+		width: 43rem;
+		transform: translateZ(-25rem) translateX(-150%);
+		transition: transform 1.5s ease-in-out;
+
+	}
+
+}
+
 /* ---------------------------- MARK: PANEL
  */
 
@@ -257,7 +324,7 @@ footer {
 
 	border-radius: 10px;
 	position: relative;
-	margin-top: -0.7rem;
+	margin-top: -0.4rem;
 	padding: 1rem;
 
 	font-family: "hyperspace-race-cap-variable", sans-serif;
@@ -268,8 +335,8 @@ footer {
 	text-shadow: 1px 0 5px var(--font-light);
 
 	display: grid;
-	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
-    grid-gap: .4rem;
+	grid-template: 1fr 1fr 1fr / 1fr .75fr .75fr .75fr .75fr;
+    row-gap: .4rem;
 }
 
 footer label {
@@ -291,14 +358,32 @@ footer label {
 /* positionering van de verschillende inputs */
 
 footer {
-	& > label:nth-of-type(1) {
-		grid-area: 2 / 1 / 2 / 1;
+	& > label:nth-of-type(1) { /* mvmt lamp */
+		grid-area: 2 / 1 / 3 / 2;
 	}
-	& > label:nth-of-type(2) {
-		grid-area: 3 / 1 / 3 / 1;
+	& > label:nth-of-type(2) { /* mvmt light */
+		grid-area: 3 / 1 / 4 / 2;
 	}
-	& > label:nth-of-type(3) {
-		grid-area: 2 / 2 / 2 / 2;
+	& > div:nth-of-type(1) { /* curtain */
+		grid-area: 1 / 1 / 2 / 2
+	}
+	& > div:nth-of-type(2) { /* forest */
+		grid-area: 1 / 3 / 2 / 4;
+	}
+	& > div:nth-of-type(3) { /* bedroom */
+		grid-area: 1 / 4 / 2 / 5;
+	}
+	& > div:nth-of-type(4) { /* alien */
+		grid-area: 1 / 5 / 2 / 6;
+	}
+	& > div:nth-of-type(5) { /* green light */
+		grid-area: 2 / 3 / 3 / 4;
+	}
+	& > div:nth-of-type(6) { /* red light */
+		grid-area: 2 / 4 / 3 / 5;
+	}
+	& > div:nth-of-type(7) { /* blue light */
+		grid-area: 2 / 5 / 3 / 6;
 	}
 }
 
@@ -307,7 +392,7 @@ footer {
 
 /* dankzij: https://youtu.be/EcnqLgCEGKU */
 
-footer > div:nth-of-type(1) {
+footer > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,16 +419,26 @@ footer > div:nth-of-type(1) {
 				inset 0 4px 8px rgba(0 0 0 / 0.4);
 			svg {
 				fill: var(--light);
+				stroke: var(--light);
+				stroke-width: 4px;
 			}
 		}
 		svg {
 			fill: #303030;
+			stroke: #303030;
+			stroke-width: 5px;
 		}
 		input {
 			display: none;
 		}
 	}
 }
+
+footer>div:nth-last-of-type(5) label svg {
+	width: 2rem;
+}
+
+
 
 /* MARK: sliders
 */
@@ -401,7 +496,8 @@ input[type="range"] {
 
 
 /* MARK: ctrl curtains
- */
+*/
+
 main:has(+ footer > div:nth-of-type(1) input:checked) {
 	h1 {
 		span:first-of-type {
@@ -412,12 +508,139 @@ main:has(+ footer > div:nth-of-type(1) input:checked) {
 		}
 	}
     aside:first-of-type {
-		transform: translateX(-62%);
+		transform: translateX(-60%) translateZ(6.5rem);
     }
 	aside:last-of-type {
-		transform: translateX(62%);
+		transform: translateX(60%) translateZ(6.5rem);
     }
 }
+
+/* MARK: scene ctrl
+*/
+
+html:has(footer>div:nth-of-type(2) input:checked) {
+	--forest: true;
+}
+
+html:has(footer>div:nth-of-type(3) input:checked) {
+	--bedroom: true;
+}
+
+html:has(footer>div:nth-of-type(4) input:checked) {
+	--alien: true;
+}
+
+@container style(--forest: true){
+	main{
+		--light: #FFE91F;
+		--theater-back: #061825;
+
+		&>div:nth-of-type(5) {
+			img:first-of-type {
+				transform: translateY(5.3rem) translateZ(-21.5rem) rotateX(0deg);
+			}
+			img:last-of-type {
+				transform: translateY(-1.2rem) translateZ(-2rem);
+			}
+		}
+	}
+
+
+}
+@container style(--bedroom: true){
+	main{
+		--light: #FFB7C5;
+
+		&>div:nth-of-type(6) {
+			img:first-of-type{
+				transform: translateX(0) translateZ(-17rem);
+			}
+			img:last-of-type{
+				transform: translateY(14.9rem) translateZ(-6rem) rotateX(0deg);
+			}
+		}
+	}
+}
+@container style(--alien: true){
+	main{
+		--light: #4B0082;
+		--theater-back: #F8DEA0;
+
+		&>div:nth-of-type(7){
+			img:first-of-type{
+
+				animation: 2s forwards 1.2s --alien-anm;
+			}
+			img:last-of-type{
+				transform: translateZ(-25rem) translateX(0);
+
+			}
+		}
+	}
+}
+
+@keyframes --alien-anm {
+	50% {
+		transform: translateX(25rem) translateZ(-25rem) rotate(30deg) translateY(8rem);
+	}
+	100% {
+		transform: translateX(25rem) translateZ(-25rem) rotate(30deg) translateY(0);
+	}
+	
+}
+
+@container style(--forest: true) and style(--bedroom: true) {
+	main {
+		--light: #FFB7C5;
+		--theater-back: #061825;
+		
+		&>div:nth-of-type(5) {
+			img:first-of-type {
+				transform: translateY(5.4rem) translateZ(-21.5rem) rotateX(90deg);
+			}
+		}
+		&>div:nth-of-type(6){
+			img:first-of-type{
+				transform: translateX(20rem) translateZ(-17rem);
+			}
+		}
+
+	}	
+}
+
+@container style(--forest: true) and style(--alien: true) {
+	main{
+	--theater-back: #3A2A04;
+	}
+}
+
+@container style(--bedroom: true) and style(--alien: true) {
+	main{
+		--theater-back: #3A2A04;
+
+		&>div:nth-of-type(6) {
+			img:first-of-type{
+				transform: translateX(-10rem) translateZ(-17rem);
+			}
+		}
+
+		&>div:nth-of-type(7) {
+			img:first-of-type { /* alien */
+				right: 0;
+				transform: translateX(-5rem) translateZ(-17.1rem) rotate(35deg) translateY(5rem);
+				animation: unset;
+				transition: transform 1s ease-in-out;
+			}
+
+			img:last-of-type{ /* piramid */
+				transform: translateZ(-25rem) translateX(-150%);
+			}
+		}
+	}
+}
+
+
+
 
 /* 
 VRAGEN
