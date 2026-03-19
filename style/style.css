@@ -40,7 +40,7 @@ body {
 	align-items: center;
 
 	cursor:
-		url("/images/cursor.svg") 18 13,
+		url("../images/cursor.svg") 18 13,
 		auto;
 }
 
@@ -309,7 +309,7 @@ footer {
 	--range-width: 100px;
 
 	cursor:
-		url("/images/cursor.svg") 18 13,
+		url("../images/cursor.svg") 18 13,
 		auto;
 
 	width: 80%;
@@ -370,7 +370,7 @@ footer label {
 	align-items: center;
 	justify-content: center;
 	cursor:
-		url("/images/cursor.svg") 18 13,
+		url("../images/cursor.svg") 18 13,
 		auto;
 	text-align: center;
 
@@ -378,7 +378,7 @@ footer label {
 		width: var(--range-width);
 		margin-top: 0.8rem;
 		cursor:
-			url("/images/cursor-pointer.svg") 11 1,
+			url("../images/cursor-pointer.svg") 11 1,
 			pointer;
 	}
 }
@@ -505,7 +505,7 @@ input[type="range"] {
 	background: transparent;
 
 	cursor:
-		url("/images/cursor-pointer.svg") 11 1,
+		url("../images/cursor-pointer.svg") 11 1,
 		pointer;
 
 	/* margin-top: .8rem; */
