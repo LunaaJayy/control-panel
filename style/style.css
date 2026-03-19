@@ -32,7 +32,6 @@ main * {
 
 body {
 	margin: 0;
-	/* KLOPT DIT? IK HEB DE PLANKEN BREDER GEDAAN MAAR NU ZIJN DE GORDIJNEN NIET EVEN BREED */
 	overflow-x: hidden;
 	background-color: var(--bg);
 
@@ -53,7 +52,7 @@ main {
 	perspective: 600px;
 
 	width: 100vw;
-	/* max-width: 800px; */
+	max-width: 1200px;
 	height: 400px;
 	position: relative;
 
@@ -313,8 +312,8 @@ footer {
 
 	width: 80%;
 	max-width: 450px;
-	height: 215px;
-	background: var(--ctrl-panel);
+	height: 32vh;
+	max-height: 265px;
 	background: radial-gradient(
 		circle,
 		rgba(103, 103, 107, 1) 0%,
@@ -337,6 +336,32 @@ footer {
 	display: grid;
 	grid-template: 1fr 1fr 1fr / 1fr .75fr .75fr .75fr .75fr;
     row-gap: .4rem;
+}
+
+@media (height >= 800px) {
+	body {
+		margin-top: 6rem;
+	}
+	main > div:last-of-type{
+		position: absolute;
+		top: -6rem;
+		width: 100%;
+		height: 9.5rem;
+		background: repeating-linear-gradient(
+			to left,
+			var(--curtain-color) 0px,
+			var(--curtain-shadow) 10px,
+			var(--curtain-shadow) 20px,
+			var(--curtain-color) 30px
+		);
+		z-index: 2;
+		transform: translateZ(10rem);
+		box-shadow: .2rem .2rem 2rem rgba(0 0 0 / 0.4);
+	}
+	footer {
+		margin-top: 4rem;
+	}
+
 }
 
 footer label {
@@ -384,6 +409,16 @@ footer {
 	}
 	& > div:nth-of-type(7) { /* blue light */
 		grid-area: 2 / 5 / 3 / 6;
+	}
+	& > p {
+		grid-area: 3 / 2 / 4 / 5;
+		text-align: end;
+		align-content: center;
+		margin: 0;
+	}
+	& > div:last-of-type { /* blue light */
+		grid-area: 3 / 5 / 4 / 6;
+		justify-content: center;
 	}
 }
 
@@ -495,7 +530,7 @@ input[type="range"] {
 }
 
 
-/* MARK: ctrl curtains
+/* MARK: ctrlCURT
 */
 
 main:has(+ footer > div:nth-of-type(1) input:checked) {
@@ -515,8 +550,12 @@ main:has(+ footer > div:nth-of-type(1) input:checked) {
     }
 }
 
-/* MARK: scene ctrl
+/* MARK:ctrlSCENE
 */
+
+html:has(footer>div:nth-of-type(8) input:checked) {
+	--interactive: true;
+}
 
 html:has(footer>div:nth-of-type(2) input:checked) {
 	--forest: true;
@@ -531,6 +570,9 @@ html:has(footer>div:nth-of-type(4) input:checked) {
 }
 
 @container style(--forest: true){
+	body {
+		--light: if(style(--interactive: true): #FFE91F; else: #fffacd)
+	}
 	main{
 		--light: #FFE91F;
 		--theater-back: #061825;
@@ -545,11 +587,14 @@ html:has(footer>div:nth-of-type(4) input:checked) {
 		}
 	}
 
-
 }
 @container style(--bedroom: true){
+	body {
+		--light: if(style(--interactive: true): #FFB7C5; else: #fffacd)
+	}
 	main{
 		--light: #FFB7C5;
+		--theater-back:#904E55;
 
 		&>div:nth-of-type(6) {
 			img:first-of-type{
@@ -562,13 +607,15 @@ html:has(footer>div:nth-of-type(4) input:checked) {
 	}
 }
 @container style(--alien: true){
+	body {
+		--light: if(style(--interactive: true): #4B0082; else: #fffacd)
+	}
 	main{
 		--light: #4B0082;
 		--theater-back: #F8DEA0;
 
 		&>div:nth-of-type(7){
 			img:first-of-type{
-
 				animation: 2s forwards 1.2s --alien-anm;
 			}
 			img:last-of-type{
@@ -590,8 +637,11 @@ html:has(footer>div:nth-of-type(4) input:checked) {
 }
 
 @container style(--forest: true) and style(--bedroom: true) {
+	body {
+		--light: if(style(--interactive: true): #904E55; else: #fffacd)
+	}
 	main {
-		--light: #FFB7C5;
+		--light: #904E55;
 		--theater-back: #061825;
 		
 		&>div:nth-of-type(5) {
@@ -616,7 +666,7 @@ html:has(footer>div:nth-of-type(4) input:checked) {
 
 @container style(--bedroom: true) and style(--alien: true) {
 	main{
-		--theater-back: #3A2A04;
+		--theater-back: #7D5BA6;
 
 		&>div:nth-of-type(6) {
 			img:first-of-type{
@@ -636,6 +686,138 @@ html:has(footer>div:nth-of-type(4) input:checked) {
 				transform: translateZ(-25rem) translateX(-150%);
 			}
 		}
+	}
+}
+
+@container style(--bedroom: true) and style(--alien: true) and style(--forest: true){
+	body {
+		--light: if(style(--interactive: true): #FE5A1D; else: #fffacd)
+	}
+	main {
+		--theater-back: #2e000b;
+		--light: #FE5A1D;
+
+		&>div:nth-of-type(5) { /* forest */
+			img:first-of-type {
+				transform: translateY(5.3rem) translateZ(-21.5rem) rotateX(0deg);
+			}
+			img:last-of-type {
+				transform: translateY(-1.2rem) translateZ(-2rem);
+			}
+		}
+
+		&>div:nth-of-type(6) { /*bedroom*/
+			img:first-of-type{
+				transform: translateX(20rem) translateZ(-17rem);
+			}
+			img:last-of-type{
+				transform: translateY(14.9rem) translateZ(-6rem) translateX(15rem) rotateX(0deg);
+			}
+		}
+
+		&>div:nth-of-type(7){ /*alien*/
+			img:first-of-type{
+				right: unset;
+				left: 5vw;
+				transform: translateX(12rem) translateZ(-21.6rem) rotate(35deg) translateY(5rem);
+				animation: unset;
+			}
+			img:last-of-type{
+				transform: translateZ(-25rem) translateX(20rem);
+
+			}
+		}
+
+	}
+}
+
+/* MARK:ctrlLIGHT
+*/
+
+
+html:has(footer>div:nth-of-type(5) input:checked) {
+	--green: true;
+}
+
+html:has(footer>div:nth-of-type(6) input:checked) {
+	--red: true;
+}
+
+html:has(footer>div:nth-of-type(7) input:checked) {
+	--blue: true;
+}
+
+
+@container style(--green: true) {
+	footer {
+		--light: if(style(--interactive: true): #66FF00; else: #fffacd)
+	}
+	main {
+		--light: #296600;
+	}
+	footer > div:nth-of-type(5) {
+		--light: #66FF00;
+	}
+}
+
+@container style(--red: true) {
+	footer {
+		--light: if(style(--interactive: true): #FF2400; else: #fffacd)
+	}
+	main {
+		--light: #B81800;
+	}
+	footer > div:nth-of-type(6) {
+		--light: #FF2400;
+	}
+}
+
+
+@container style(--blue: true) {
+	footer {
+		--light: if(style(--interactive: true): #0FFFFF; else: #fffacd)
+	}
+	main {
+		--light: #00CCCC;
+	}
+	footer > div:nth-of-type(7) {
+		--light: #0FFFFF;
+	}
+}
+
+@container style(--green: true) and style(--red: true) {
+	footer {
+		--light: if(style(--interactive: true): #FFD61F; else: #fffacd)
+	}
+	main {
+		--light: #FFD61F;
+	}
+}
+
+@container style(--green: true) and style(--blue: true) {
+	footer {
+		--light: if(style(--interactive: true): #5AD888; else: #fffacd)
+	}
+	main {
+		--light: #5AD888;
+	}
+}
+
+@container style(--red: true) and style(--blue: true) {
+	footer {
+		--light: if(style(--interactive: true): #D52BDE; else: #fffacd)
+	}
+	main {
+		--light: #D52BDE;
+	}
+}
+
+@container style(--red: true) and style(--blue: true) and style(--green: true){
+footer {
+		--light: if(style(--interactive: true): #000; else: #fffacd)
+	}
+	main {
+		--light: #000;
 	}
 }
 
