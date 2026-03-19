@@ -187,7 +187,7 @@ Hier nog een video waarbij 3d en anchor positioning nog samen gingen en niet wer
 
 Ik ben erg trots met hoe de lamp beweegt en draait met (bijna) geen JavaScript. Toen ik eenmaal de workshop van Sanne had gevolgd wist ik gelijk hoe ik het wilde doen, en de skew() vervolgens viel ook wel mee. Ook ben ik blij met hoe mijn gordijnen eruit zien (met dank aan Melvin) en hoe mijn control panel eruit ziet.
 
-![lamp en control](/readme-images/eind-licht-bwg.png)
+<img src="/readme-images/eind-licht-bwg.png" alt="lamp en control" width="200px"/>
 
 Een experiment dat ik heb geprobeerd, maar mislukte, was aan de hand van @layer ervoor zorgen dat de kleur van het licht van de scene wordt overschreden door de 'lichtknop'. Helaas deed geen een licht het toen meer dus had ik besloten het niet te doen. Ik wilde eigenlijk oefenen met het gebruik van @layer, maar door gebrek aan tijd wilde ik dit niet meer toevoegen. 
 
