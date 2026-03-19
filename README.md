@@ -1,3 +1,5 @@
+**Website werkt het best in Chromium!**
+
 # READ-ME CONTROL PANEL
 ## Week 1
 ### Dag 1 - Woensdag 18 feb 
